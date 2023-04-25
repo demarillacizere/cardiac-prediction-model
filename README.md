@@ -46,7 +46,7 @@
 <li>First, make sure you have Node.js and NPM installed on your local machine.</li >
       <li>Make sure you have Node.js and NPM installed on your local machine.</li >
       <li>In the command line, navigate to the root directory of the cloned application.</li >
-      <li>Install the required dependencies for your application using the command npm install./li >
+      <li>Install the required dependencies for your application using the command npm install.</li >
       <li>Start your server by running the command node app.js or npm start if there is a start script defined in the package.json file.</li >
       <li>Open your application in the browser by navigating to http://localhost:3000 (replace 3000 with the port number your application is running on).</li >
 
