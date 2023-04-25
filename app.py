@@ -69,8 +69,8 @@ def predict():
               prediction = 0 
         elif(currentSmoker == '1' and prevalentStroke == '1' and diabetes == '1' and prevalentHyp == '1' and BPMeds == '1'):
               prediction = 1 
-        elif((float(totChol)<300 and float(BMI) < 24) and int(cigsPerDay) < 3 ):
-              prediction = 0        
+        elif((float(totChol)>300 and float(BMI) > 24) and int(cigsPerDay) > 3 ):
+              prediction = 1        
         print(prediction)
         
         return render_template('index.html', prediction=prediction)
