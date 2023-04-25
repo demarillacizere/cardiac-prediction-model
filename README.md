@@ -37,7 +37,7 @@
       <li>Clone this repository to your folder</li >
       <li>Initialize a new Node.js project by running the command npm init and following the prompts.</li >
       <li>Install the required dependencies for your application using the command npm install.</li >
-      <li>First, make sure you have a Heroku account. If you don't have one, sign up for free at www.heroku.com.</li >
+      <li>First, make sure you have a Heroku account.</li >
       <li>Create a new Heroku app by running the command heroku create.</li >
       <li>Push your code to the Heroku app using the command git push heroku master.</li >
       <li>Open your application in the browser by running the command heroku open.</li >
