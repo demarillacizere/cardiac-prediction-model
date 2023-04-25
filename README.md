@@ -4,7 +4,7 @@
 
 <h3>Framingham dataset:</h3>
 
-<b>We got thr dataset from Kaggle, and it is from an ongoing ongoing cardiovascular study on residents of the town of Framingham. The classification goal is to predict whether the patient has 10-year risk of future coronary heart disease.The dataset provides the patients’ information. It includes over 4,240 records and 15 attributes.</b>
+<b>We got the dataset from Kaggle, and it is from an ongoing ongoing cardiovascular study on residents of the town of Framingham. The classification goal is to predict whether the patient has 10-year risk of future coronary heart disease.The dataset provides the patients’ information. It includes over 4,240 records and 15 attributes.</b>
 <br></br>
 <hr></hr>
 <h3>Attributes:</h3>
