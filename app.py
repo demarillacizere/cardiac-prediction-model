@@ -62,12 +62,12 @@ def predict():
             'glucose': [glucose],
         })
         user_data = user_data[data.columns]
-        y_pred = model.predict(user_data)
+        # y_pred = model.predict(user_data)
         print(user_data)
-        prediction=y_pred[0]
-        if(currentSmoker == 0 and prevalentStroke == 0 and diabetes == 0 and prevalentHyp == 0 and BPMeds == 0 ):
+        prediction=0
+        if(currentSmoker == '0' and prevalentStroke == '0' and diabetes == '0' and prevalentHyp == '0' and BPMeds == '0' ):
               prediction = 0 
-        elif(currentSmoker == 1 and prevalentStroke == 1 and diabetes == 1 and prevalentHyp == 1 and BPMeds == 1):
+        elif(currentSmoker == '1' and prevalentStroke == '1' and diabetes == '1' and prevalentHyp == '1' and BPMeds == '1'):
               prediction = 1 
         elif((float(totChol)<300 and float(BMI) < 24) and int(cigsPerDay) < 3 ):
               prediction = 0        
