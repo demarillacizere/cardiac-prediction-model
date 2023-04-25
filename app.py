@@ -6,8 +6,9 @@ from sklearn.preprocessing import LabelEncoder
 app = Flask(__name__)
 
 # load the trained model
-model = joblib.load("model.joblib")
+model = joblib.load("model2.joblib")
 data = pd.read_csv('framingham.csv')
+
 # Drop the 'TenYearCHD' column from the dataframe
 data = data.drop('TenYearCHD', axis=1)
 data = data.drop('education', axis=1)
@@ -61,14 +62,15 @@ def predict():
             'glucose': [glucose],
         })
         user_data = user_data[data.columns]
-        print(user_data)
         y_pred = model.predict(user_data)
+        print(user_data)
         prediction=y_pred[0]
-        if(currentSmoker==0 and prevalentStroke == 0 and diabetes == 0 and totChol == 0 and BPMeds == 0 and cigsPerDay == 0 ):
+        if(currentSmoker == 0 and prevalentStroke == 0 and diabetes == 0 and prevalentHyp == 0 and BPMeds == 0 and cigsPerDay == 0 ):
               prediction = 0 
-        elif(totChol>300 and BMI > 26 or cigsPerDay > 3 ):
-              prediction = 1   
-        # y_pred = model.predict([sex,age,currentSmoker,cigsPerDay,BPMeds,prevalentStroke,prevalentHyp,diabetes,totChol,sysBP,diaBP,BMI,heartRate,glucose])      
+        elif(currentSmoker == 1 and prevalentStroke == 1 and diabetes == 1 and prevalentHyp == 1 and BPMeds == 1):
+              prediction = 1 
+        elif((float(totChol)>300 and float(BMI) > 4) and int(cigsPerDay) > 3 ):
+              prediction = 0        
         print(prediction)
         
         return render_template('index.html', prediction=prediction)
