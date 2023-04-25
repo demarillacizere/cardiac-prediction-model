@@ -31,22 +31,24 @@
 <hr></hr>
 <h2>Objective: Build a classification model that predicts heart disease.</h2>(note the target column to predict is 'TenYearCHD' where CHD = Coronary heart disease) 
 
-<h1>Hosting a Node.js application on Heroku</h1>
-      <li>First, make sure you have Node.js and NPM installed on your local machine.</li >
+<h1>Hosting a Flask application on Heroku</h1>
+      <li>First, make sure you have Python and PIP installed on your local machine.</li >
       <li>Create a new directory for your application and navigate to it using the command line.</li >
       <li>Clone this repository to your folder</li >
-      <li>Initialize a new Node.js project by running the command npm init and following the prompts.</li >
-      <li>Install the required dependencies for your application using the command npm install.</li >
+      <li>Create a virtual environment using the command python<version> -m venv env</li >
+      <li>Create a virtual environment using the command source env/bin/activate</li >
+      <li>Install the required dependencies for your application using the command pip install -r requirements.txt</li >
       <li>First, make sure you have a Heroku account.</li >
       <li>Create a new Heroku app by running the command heroku create.</li >
       <li>Push your code to the Heroku app using the command git push heroku master.</li >
       <li>Open your application in the browser by running the command heroku open.</li >
       
 <h1>Hosting on a local server:</h1>
-<li>First, make sure you have Node.js and NPM installed on your local machine.</li >
-      <li>Make sure you have Node.js and NPM installed on your local machine.</li >
+<li>First, make sure you have Python and PIP installed on your local machine.</li >
       <li>In the command line, navigate to the root directory of the cloned application.</li >
-      <li>Install the required dependencies for your application using the command npm install.</li >
-      <li>Start your server by running the command node app.js or npm start if there is a start script defined in the package.json file.</li >
-      <li>Open your application in the browser by navigating to http://localhost:3000 (replace 3000 with the port number your application is running on).</li >
+      <li>Create a virtual environment using the command python<version> -m venv env</li >
+      <li>Create a virtual environment using the command source env/bin/activate</li >
+      <li>Install the required dependencies for your application using the command pip install -r requirements.txt</li >
+      <li>Start your server by running the command python app.py</li >
+      <li>Open your application in the browser by navigating to http://127.0.0.1:5000</li >
 
