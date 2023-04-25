@@ -63,9 +63,15 @@ def predict():
         user_data = user_data[data.columns]
         print(user_data)
         y_pred = model.predict(user_data)
-        print(y_pred[0])
+        prediction=y_pred[0]
+        if(currentSmoker==0 and prevalentStroke == 0 and diabetes == 0 and totChol == 0 and BPMeds == 0 and cigsPerDay == 0 ):
+              prediction = 0 
+        elif(totChol>300 and BMI > 26 or cigsPerDay > 3 ):
+              prediction = 1   
+        # y_pred = model.predict([sex,age,currentSmoker,cigsPerDay,BPMeds,prevalentStroke,prevalentHyp,diabetes,totChol,sysBP,diaBP,BMI,heartRate,glucose])      
+        print(prediction)
         
-        return render_template('index.html')
+        return render_template('index.html', prediction=prediction)
 
 if __name__ == '__main__':
     app.run(debug=True)

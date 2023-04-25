@@ -198,30 +198,11 @@
       </div>    
     </form>
   </div>
-  {% if predictions %}
-      <h4>Predictions for the top 10 players</h4>
+  {% if prediction %}
+      <h4>{{prediction}}</h4>
+  {% endif %}    
    
-<div class="table-container">
-   <table class="table table-striped table-bordered  mb-5 mx-auto">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Predicted Overall</th>
-          <th>Actual Overall</th>
-        </tr>
-      </thead>
-      <tbody>
-         {% for i in range(10) %}
-          <tr>
-            <td>{{ names[loop.index0] }}</td>
-            <td>{{ predictions[loop.index0] }}</td>
-            <td>{{ realvalues[loop.index0] }}</td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    {% endif %}
-</div>
+
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
