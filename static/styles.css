@@ -1,8 +1,8 @@
 main {
     background-image: url('wallp.webp');
     background-color:rgba(0,0,0,1);
-    background: linear-gradient(rgb(0,0,0,0.8), rgb(12,72,72,0.8)), url('wallp.webp'); 
-    background: linear-gradient(rgb(0,0,0,0.8), rgb(12,72,72,0.8)), url('wallp.webp');
+    background: linear-gradient(rgb(0,0,0,0.8), rgb(192,72,72,0.8)), url('wallp.webp'); 
+    background: linear-gradient(rgb(0,0,0,0.8), rgb(202,72,72,0.6)), url('wallp.webp');
     background-position:;
     background-size:contain;
     font-family: Arial, sans-serif;
