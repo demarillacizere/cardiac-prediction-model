@@ -24,10 +24,10 @@
       margin: 0 auto;
     }
          .form-container {
-           max-width: 500px;
+           max-width: 800px;
            margin: 0 auto;
            background-color: #fff;
-           padding: 30px;
+           padding: 40px 80px;
            border-radius: 5px;
            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
          }
@@ -73,20 +73,139 @@
          </div>
        </nav>
       
-      <h4 class="fw-semibold">Upload a Players' CSV file to get predictions</h4>
+      <h4 class="fw-semibold">Enter your data</h4>
   <div class="container form-container">
     <form  action="/predict" method="post" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="exampleFormControlFile1">Choose a file to upload:</label>
-        <div class="custom-file my-5">
-          <input type="file" class="custom-file-input" id="exampleFormControlFile1" name="file">
+      <div class="row mb-3">
+				<label for="sex" class="col-sm-4 col-form-label">Sex</label>
+				<div class="col-sm-8">
+					<select id="sex" name="sex" class="form-select" required>
+						<option value=1>Male</option>
+						<option value=0>Female</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label for="age" class="col-sm-4 col-form-label">Age</label>
+				<div class="col-sm-8">
+					<input type="number" id="age" name="age" class="form-control" required>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label for="education" class="col-sm-4 col-form-label">Education Level</label>
+				<div class="col-sm-8">
+					<select id="education" name="education" class="form-select" required>
+						<option value=0>Less than High School / High School degrees</option>
+						<option value=1>College Degree and Higher</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label for="current-smoker" class="col-sm-4 col-form-label">Are you a current smoker?</label>
+				<div class="col-sm-8">
+					<select id="current-smoker" name="currentSmoker" class="form-select" required>
+						<option value=1>Yes</option>
+						<option value=0>No</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label for="cigs-per-day" class="col-sm-4 col-form-label">If yes, how many cigarettes per day?</label>
+				<div class="col-sm-8">
+					<input type="number" id="cigs-per-day" name="cigsPerDay" class="form-control" default=0>
+				</div>
+			</div>
+
+      
+
+			<div class="row mb-3">
+				<label for="bp-meds" class="col-sm-4 col-form-label">Have you been on blood pressure medications?</label>
+				<div class="col-sm-8">
+					<select id="bp-meds" name="BPMeds" class="form-select" required>
+						<option value=1>Yes</option>
+						<option value=0>No</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label for="prevalent-stroke" class="col-sm-4 col-form-label">Have you ever had a stroke?</label>
+				<div class="col-sm-8">
+					<select id="prevalent-stroke" name="prevalentStroke" class="form-select" required>
+						<option value=1>Yes</option>
+						<option value=0>No</option>
+					</select>
+				</div>
+      </div><div class="row mb-3">
+        <label for="prevalent-hyp" class="col-sm-4 col-form-label">Do you have hypertension?</label>
+        <div class="col-sm-8">
+          <select id="prevalent-hyp" name="prevalentHyp" class="form-select" required>
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+          </select>
         </div>
       </div>
-      {% if message %}
-         <p>{{ message }}</p>
-      {% endif %}
   
-      <button type="submit" class="btn btn-primary" value="Predict">Predict</button>
+      <div class="row mb-3">
+        <label for="diabetes" class="col-sm-4 col-form-label">Do you have diabetes</label>
+        <div class="col-sm-8">
+          <select id="diabetes" name="diabetes" class="form-select" required>
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <label for="tot-chol" class="col-sm-4 col-form-label">Total Cholesterol Level</label>
+        <div class="col-sm-8">
+          <input type="number" id="tot-chol" name="totChol" class="form-control" required>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <label for="sys-bp" class="col-sm-4 col-form-label">Systolic Blood Pressure</label>
+        <div class="col-sm-8">
+          <input type="number" id="sys-bp" name="sysBP" class="form-control" required>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <label for="dia-bp" class="col-sm-4 col-form-label">Diastolic Blood Pressure</label>
+        <div class="col-sm-8">
+          <input type="number" id="dia-bp" name="diaBP" class="form-control" required>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <label for="bmi" class="col-sm-4 col-form-label">Body Mass Index (BMI)</label>
+        <div class="col-sm-8">
+          <input type="number" id="bmi" name="BMI" class="form-control" required>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <label for="heart-rate" class="col-sm-4 col-form-label">Heart Rate</label>
+        <div class="col-sm-8">
+          <input type="number" id="heart-rate" name="heartRate" class="form-control" required>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <label for="glucose" class="col-sm-4 col-form-label">Glucose Level</label>
+        <div class="col-sm-8">
+          <input type="number" id="glucose" name="glucose" class="form-control" required>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-sm-12 offset-sm-5">
+          <button type="submit" class="btn btn-primary" value="Predict">Predict</button>
+        </div>
+      </div>    
     </form>
   </div>
   {% if predictions %}
