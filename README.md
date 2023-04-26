@@ -1,4 +1,5 @@
 ## Link to the google colab: https://colab.research.google.com/drive/1P77eOi7ctMwhaL0vpiCRS0sP0AyK5Hrs#scrollTo=Lb4NgqW1Tvl_
+## Link to the recording: https://drive.google.com/drive/folders/1g1C8l2_9MNF_PA3KoouqholuotiKav5B?usp=share_link
 # cardiac-prediction-model
 <h1>This is a Machine Learning Model that predicts Heart Diseases with the help of Framingham Data Set</h1>
 
